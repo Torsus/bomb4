@@ -1,0 +1,481 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About bomb"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "bomb Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2001",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_BOMB_DIALOG DIALOGEX 0, 0, 550, 305
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "bomb"
+MENU IDR_MENU1
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Fotboll",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,228,189,34,8
+    CONTROL         "Ishockey",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,228,199,43,9
+    CONTROL         "Bandy",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,228,208,42,9
+    CONTROL         "Fotboll",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,228,227,41,8
+    CONTROL         "Ishock. 2 ",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON,228,236,47,9
+    CONTROL         "Ishock. 3",IDC_RADIO8,"Button",BS_AUTORADIOBUTTON,227,247,47,9
+    CONTROL         "Fotboll",IDC_RADIO9,"Button",BS_AUTORADIOBUTTON,226,268,47,10
+    CONTROL         "Ishockey",IDC_RADIO10,"Button",BS_AUTORADIOBUTTON,226,280,47,10
+    CONTROL         "Ishock 3 - Sverige",IDC_RADIO11,"Button",BS_AUTORADIOBUTTON,284,234,77,10
+    CONTROL         "Ishock 1 - Sverige",IDC_RADIO12,"Button",BS_AUTORADIOBUTTON,283,245,77,10
+    CONTROL         "Bandy 3 - Sverige",IDC_RADIO13,"Button",BS_AUTORADIOBUTTON,283,257,77,10
+    CONTROL         "fotboll 4 matcher",IDC_RADIO14,"Button",BS_AUTORADIOBUTTON,284,268,70,11
+    CONTROL         "U/b fotboll 3 matcher",IDC_RADIO15,"Button",BS_AUTORADIOBUTTON,368,233,90,11
+    CONTROL         "U/b hockey 2 matcher",IDC_RADIO16,"Button",BS_AUTORADIOBUTTON,368,246,90,11
+    CONTROL         "U/b fotboll 2 matcher",IDC_RADIO17,"Button",BS_AUTORADIOBUTTON,368,259,90,11
+    GROUPBOX        "Spel Finland",IDC_STATIC,223,217,53,40
+    EDITTEXT        IDC_EDIT1,7,42,25,16,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,49,42,25,16,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,90,42,25,16,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT4,142,42,22,16,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT5,181,42,22,16,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT6,223,42,22,16,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT7,257,42,26,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT8,301,42,25,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT9,345,42,25,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT50,389,41,30,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT51,431,41,34,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT52,477,41,40,14,ES_AUTOHSCROLL
+    LTEXT           "Start",IDC_STATIC,74,265,15,9
+    EDITTEXT        IDC_EDIT39,10,157,46,15,ES_AUTOHSCROLL
+    GROUPBOX        "Spel Sverige",IDC_STATIC,223,177,53,42
+    EDITTEXT        IDC_EDIT45,275,184,33,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT41,309,185,33,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT37,349,184,34,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT38,63,157,32,15,ES_AUTOHSCROLL
+    GROUPBOX        "Spel Norge",IDC_STATIC,222,258,61,38
+    DEFPUSHBUTTON   "Generera tabeller",IDOK,7,134,59,14
+    LTEXT           "Match 1",IDC_STATIC,7,7,61,19
+    LTEXT           "Match 2",IDC_STATIC,161,7,61,16
+    LTEXT           "Match 3",IDC_STATIC,291,7,61,19
+    LTEXT           "Ett",IDC_STATIC,7,24,22,9
+    LTEXT           "kryss",IDC_STATIC,51,24,22,9
+    LTEXT           "Två",IDC_STATIC,89,24,22,9
+    LTEXT           "Ett",IDC_STATIC,142,23,32,10
+    LTEXT           "Kryss",IDC_STATIC,179,23,32,10
+    LTEXT           "Två",IDC_STATIC,225,23,32,10
+    LTEXT           "Ett",IDC_STATIC,257,24,20,9
+    LTEXT           "Kryss",IDC_STATIC,301,25,20,8
+    LTEXT           "Två",IDC_STATIC,346,25,20,8
+    LTEXT           "Placering",IDC_STATIC,287,147,34,8
+    LTEXT           "Nominalodds",IDC_STATIC,328,148,47,8
+    EDITTEXT        IDC_EDIT10,287,155,32,16,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT11,329,155,62,16,ES_AUTOHSCROLL | ES_READONLY
+    COMBOBOX        IDC_COMBO1,7,117,128,71,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO2,142,117,115,64,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO3,268,117,115,81,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Beräkna placering",IDC_BUTTON1,257,135,64,12
+    PUSHBUTTON      "Beräkna odds",IDC_BUTTON2,332,134,55,12
+    EDITTEXT        IDC_EDIT12,7,63,26,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT13,51,63,24,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT14,91,63,25,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT15,142,63,23,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT16,182,63,21,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT17,225,63,21,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT18,257,63,28,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT19,303,63,25,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT20,343,63,27,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT21,7,78,21,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT22,35,78,21,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT23,78,78,21,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT24,105,78,21,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT25,142,78,21,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT26,169,78,21,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT27,203,78,21,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT28,231,78,21,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT29,257,78,23,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT30,287,78,24,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT31,330,78,23,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT32,358,78,23,12,ES_AUTOHSCROLL
+    LTEXT           "Antal i tabell",IDC_STATIC,7,99,58,8
+    EDITTEXT        IDC_EDIT33,65,99,32,12,ES_AUTOHSCROLL
+    LTEXT           "Antal i tabell",IDC_STATIC,142,99,42,10
+    EDITTEXT        IDC_EDIT34,195,99,30,13,ES_AUTOHSCROLL
+    LTEXT           "Antal i tabell",IDC_STATIC,257,99,38,12
+    EDITTEXT        IDC_EDIT35,307,99,25,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT36,105,157,29,16,ES_AUTOHSCROLL
+    LTEXT           "Minkvot",IDC_STATIC,105,149,28,8
+    PUSHBUTTON      "Skapa Rapportfil",IDC_BUTTON6,151,182,64,15
+    LTEXT           "MatchIDNr:",IDC_STATIC,345,176,45,8
+    LTEXT           "Maxnomodds",IDC_STATIC,57,149,45,8
+    LTEXT           "Omsättning",IDC_STATIC,13,149,38,8
+    LTEXT           "Mininsats ",IDC_STATIC,138,149,35,8
+    EDITTEXT        IDC_EDIT40,140,157,25,16,ES_AUTOHSCROLL
+    LTEXT           "Maxsida",IDC_STATIC,313,176,27,8
+    EDITTEXT        IDC_EDIT42,20,274,40,14,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    LTEXT           "Antal Odds",IDC_STATIC,21,265,38,8
+    LTEXT           "Återbet.",IDC_STATIC,177,149,25,8
+    EDITTEXT        IDC_ATERBET_EDIT,176,157,25,15,ES_AUTOHSCROLL
+    LTEXT           "Kvotjustering",IDC_STATIC,209,149,44,8
+    EDITTEXT        IDC_KVOTJUSTERING_EDIT,212,157,25,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "AutoInläsning",IDC_BUTTON10,96,274,30,14
+    CONTROL         "Aktiverad",IDC_AUTOINLASNING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,156,261,46,11
+    LTEXT           "Tim",IDC_STATIC,89,253,13,9
+    LTEXT           "Min",IDC_STATIC,107,253,15,9
+    EDITTEXT        IDC_EDIT_STARTTIMME,91,261,16,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_STARTMINUT,108,261,16,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "Läs internet-odds",IDC_BUTTON5,323,216,66,15
+    CONTROL         "Vanligt spel",IDC_RADIO6,"Button",BS_AUTORADIOBUTTON | WS_GROUP,76,135,49,10
+    CONTROL         "Utvärdering",IDC_RADIO7,"Button",BS_AUTORADIOBUTTON,127,134,50,11
+    PUSHBUTTON      "Egna Rader",IDC_BUTTON11,151,202,67,16
+    CONTROL         "Ospelade förvalt",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,323,200,66,10
+    CONTROL         "Separat odds för ospelade",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,177,98,10
+    EDITTEXT        IDC_EDIT43,110,176,32,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT44,155,227,33,12,ES_AUTOHSCROLL
+    LTEXT           "Bombnummer",IDC_STATIC,156,219,44,8
+    LTEXT           "Minsida",IDC_STATIC,275,177,25,8
+    PUSHBUTTON      "KlippboksOdds",IDC_BUTTON3,19,250,50,14
+    EDITTEXT        IDC_EDIT46,283,217,18,12,ES_AUTOHSCROLL
+    LTEXT           "Antal",IDC_STATIC,281,200,17,8
+    LTEXT           "instanser",IDC_STATIC,281,208,29,8
+    CONTROL         "Kryssa",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,105,199,37,10
+    LTEXT           "Målgrupp min",IDC_STATIC,7,191,43,8
+    LTEXT           "max",IDC_STATIC,59,191,14,8
+    EDITTEXT        IDC_EDIT47,29,201,13,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT48,58,201,13,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT49,60,220,20,12,ES_AUTOHSCROLL
+    LTEXT           "Fördröj klippbok",IDC_STATIC,7,223,51,8
+    EDITTEXT        IDC_EDIT53,389,63,31,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT54,431,62,36,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT55,476,62,41,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT56,387,81,23,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT57,413,82,22,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT58,467,80,24,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT59,514,78,29,14,ES_AUTOHSCROLL
+    LTEXT           "Ett",IDC_STATIC,394,24,18,9
+    LTEXT           "kryss",IDC_STATIC,439,24,18,9
+    LTEXT           "Två",IDC_STATIC,481,24,24,9
+    LTEXT           "Antal i tabell",IDC_STATIC,389,99,41,10
+    EDITTEXT        IDC_EDIT60,437,99,30,12,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO4,411,116,115,81,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Windows Vista",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,90,219,63,10
+    EDITTEXT        IDC_EDIT61,127,235,13,12,ES_AUTOHSCROLL
+    LTEXT           "Y-offs",IDC_STATIC,125,227,22,9
+    LTEXT           "X-offs",IDC_STATIC,101,227,22,9
+    EDITTEXT        IDC_EDIT62,104,235,13,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Postest",IDC_BUTTON4,18,236,50,12
+    CONTROL         "Betrakta 1 krona som ospelad",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,286,283,110,10
+END
+
+IDD_ODDSLAS DIALOGEX 0, 0, 420, 196
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Oddsinläsning"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,266,175,50,14
+    CONTROL         "Progress1",IDC_PROGRESS1,"msctls_progress32",PBS_SMOOTH | WS_BORDER,40,15,260,10
+    EDITTEXT        IDC_EDIT1,141,175,40,14,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    LTEXT           "Antal Odds",IDC_STATIC,143,167,38,8
+    CONTROL         "Upprepa",IDC_CHECK_UPPREPA,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,201,175,45,10
+    EDITTEXT        IDC_MISSADESIDOR,345,15,27,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    LTEXT           "Antal",IDC_STATIC,340,0,20,8
+    PUSHBUTTON      "Test",IDC_BUTTON1,349,170,33,19
+    EDITTEXT        IDC_MISSADESIDOR2,345,30,27,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_MISSADESIDOR3,345,45,27,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_MISSADESIDOR4,345,60,27,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_MISSADESIDOR5,345,75,27,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_MISSADESIDOR6,345,90,27,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_MISSADESIDOR7,345,105,27,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_MISSADESIDOR8,345,120,27,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_MISSADESIDOR9,345,135,27,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_MISSADESIDOR10,345,150,27,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_STARTSIDA1,5,15,32,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_STARTSIDA2,5,30,32,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_STARTSIDA3,5,45,32,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_STARTSIDA4,5,60,32,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_STARTSIDA5,5,75,32,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_STARTSIDA6,5,90,32,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_STARTSIDA7,5,105,32,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_STARTSIDA8,5,120,32,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_STARTSIDA9,5,135,32,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_STARTSIDA10,5,150,32,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    LTEXT           "Startsida",IDC_STATIC,5,5,50,8
+    EDITTEXT        IDC_MAXSIDA1,306,15,34,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    LTEXT           "Maxsida",IDC_STATIC,310,5,30,8
+    EDITTEXT        IDC_MAXSIDA2,306,30,34,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_MAXSIDA3,306,45,34,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_MAXSIDA4,306,60,34,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_MAXSIDA5,306,75,34,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_MAXSIDA6,306,90,34,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_MAXSIDA7,306,105,34,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_MAXSIDA8,306,120,34,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_MAXSIDA9,306,135,34,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_MAXSIDA10,306,150,34,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    CONTROL         "Progress1",IDC_PROGRESS2,"msctls_progress32",PBS_SMOOTH | WS_BORDER,40,30,260,10
+    CONTROL         "Progress1",IDC_PROGRESS3,"msctls_progress32",PBS_SMOOTH | WS_BORDER,40,45,260,10
+    CONTROL         "Progress1",IDC_PROGRESS4,"msctls_progress32",PBS_SMOOTH | WS_BORDER,40,60,260,10
+    CONTROL         "Progress1",IDC_PROGRESS5,"msctls_progress32",PBS_SMOOTH | WS_BORDER,40,75,260,10
+    CONTROL         "Progress1",IDC_PROGRESS6,"msctls_progress32",PBS_SMOOTH | WS_BORDER,40,90,260,10
+    CONTROL         "Progress1",IDC_PROGRESS7,"msctls_progress32",PBS_SMOOTH | WS_BORDER,40,105,260,10
+    CONTROL         "Progress1",IDC_PROGRESS8,"msctls_progress32",PBS_SMOOTH | WS_BORDER,40,120,260,10
+    CONTROL         "Progress1",IDC_PROGRESS9,"msctls_progress32",PBS_SMOOTH | WS_BORDER,40,135,260,10
+    CONTROL         "Progress1",IDC_PROGRESS10,"msctls_progress32",PBS_SMOOTH | WS_BORDER,40,150,260,10
+    EDITTEXT        IDC_EDIT2,68,175,27,14,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    LTEXT           "Instanser",IDC_STATIC,67,166,38,8
+    EDITTEXT        IDC_INLASTAODDS1,380,15,30,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    LTEXT           "missad sidor",IDC_STATIC,340,5,40,8
+    LTEXT           "Inlästa",IDC_STATIC,383,0,27,8
+    LTEXT           "odds",IDC_STATIC,383,5,20,8
+    EDITTEXT        IDC_INLASTAODDS2,380,30,30,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_INLASTAODDS3,380,45,30,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_INLASTAODDS4,380,60,30,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_INLASTAODDS5,380,75,30,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_INLASTAODDS6,380,90,30,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_INLASTAODDS7,380,105,30,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_INLASTAODDS8,380,120,30,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_INLASTAODDS9,380,135,30,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    EDITTEXT        IDC_INLASTAODDS10,380,150,30,12,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "bomb MFC Application"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "bomb"
+            VALUE "LegalCopyright", "Copyright (C) 2001"
+            VALUE "OriginalFilename", "bomb.EXE"
+            VALUE "ProductName", "bomb Application"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_BOMB_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 543
+        VERTGUIDE, 142
+        VERTGUIDE, 257
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 300
+        HORZGUIDE, 16
+        HORZGUIDE, 33
+        HORZGUIDE, 55
+        HORZGUIDE, 99
+        HORZGUIDE, 191
+    END
+
+    IDD_ODDSLAS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 413
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 189
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_BOMB_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "&About bomb..."
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Swedish (Sweden) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_SVE)
+LANGUAGE LANG_SWEDISH, SUBLANG_SWEDISH
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\bomb.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\bomb.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU
+BEGIN
+    POPUP "&Arkiv"
+    BEGIN
+        MENUITEM "&Ny",                         ID_FILE_NEW
+        MENUITEM "&Öppna",                      ID_FILE_OPEN
+        MENUITEM "&Spara",                      ID_FILE_SAVE
+        MENUITEM "&Importera",                  ID_FILE_IMPORT
+        MENUITEM "&Avsluta",                    ID_FILE_EXIT
+    END
+    POPUP "Redigera"
+    BEGIN
+        MENUITEM "Klistra in  odds",            ID_EDIT_PASTE
+    END
+    MENUITEM "&Hjälp",                      65535
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "res\\bitmap1.bmp"
+
+#endif    // Swedish (Sweden) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\bomb.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

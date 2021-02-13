@@ -1,0 +1,152 @@
+
+<!DOCTYPE html
+  SYSTEM "">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="no"><head><style type="text/css">
+
+                    .container {
+                        width: 100%;
+                        margin: 0 auto;
+                        margin-top: 50px;
+                        max-width: 1200px;
+                        text-align: left;
+                    }
+
+                    .topbar {
+                        height: 65px;
+                        background: #428bca;
+                        top: 0;
+                        width: 100%;
+                    }
+
+                    .sr-only {
+                        position: absolute;
+                        width: 1px;
+                        height: 1px;
+                        margin: -1px;
+                        padding: 0;
+                        overflow: hidden;
+                        clip: rect(0,0,0,0);
+                        border: 0;
+                    }
+
+                    .sitelogo {
+                        margin-top:11px;
+                        margin-bottom:0px;
+                        margin-left: auto;
+                        margin-right:auto;
+                        width: 280px;
+                        height: inherit;
+                        margin: 0 auto;
+                    }
+
+                    .logo {
+                        height: 100%;
+                        float: left;
+                        margin-left: 10px;
+                        margin-top: 7px;
+                        background-repeat: no-repeat;
+                    }
+
+                    .logo-nt-logomark img {
+                        width: 30px;
+                        float: left;
+                        margin: 0px;
+                        margin-bottom: 0px;
+                    }
+
+                    .logo-nt-logoname img {
+                        width: 230px;
+                        margin: 0px;
+                        margin-bottom: 0px;
+                    }
+
+                    body {
+                        margin: 0px;
+                        background-image: url(/kompatibilitet-modus/_image/87119.png?_encoded=2f66666666666678302f35382f&amp;_ts=148598259e0);
+                        background-size: 100px;
+                        background-repeat: repeat;
+                        background-color: #ebebe8;
+                    }
+
+                    .button {
+                        display: block;
+                        width: 115px;
+                        height: 20px;
+                        padding: 10px;
+                        margin: 11px;
+                        background: #0D80B8;
+                        text-align: center;
+                        border-radius: 5px;
+                        color: white;
+                        font-size: 16px;
+                        text-decoration: none;
+                        margin: 0 auto;
+                        margin-top: 10px;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: #0075ac;
+                    }
+
+                    a:hover, a:focus {
+                        color: #0075ac;
+                        text-decoration: underline;
+                    }
+
+                </style><meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Norsk Tipping - Kompatibilitet Modus</title></head><body><div class="topbar" role="header"><h1 class="sitelogo"><a href="/"><span class="logo-nt-logomark logo"><img alt="" src="/kompatibilitet-modus/_image/87120.png?_encoded=2f66666666666678302f35382f&amp;_ts=14859831948" /></span></a><a href="/"><span class="logo-nt-logoname logo"><img alt="" src="/kompatibilitet-modus/_image/87121.png?_encoded=2f66666666666678302f35382f&amp;_ts=1485983e468" /></span><span class="sr-only">Norsk Tipping</span></a></h1></div><div id="pageContent" class="content kompatibilitet-modus"><div class="container"><style  type="text/css">
+            .page-content {
+                margin-top: 65px;
+                margin: 0 auto;
+                font-family: "DIN Regular","Helvetica Neue",Helvetica,Arial,sans-serif;
+                color: #333;
+                font-size: 22px;
+            }
+
+            .title {
+                color: #EE0440;
+                font-size: 26px;
+                margin-bottom: 20px;
+            }
+
+            .button {
+                margin: 11px;
+                float: left;
+            }
+
+            .browser-links {
+                text-align: center;
+                width: 600px;
+                margin: 0 auto;
+            }
+
+            .browser {
+                float: left;
+                width: 150px;
+                height: 250px;
+            }
+
+            .contact-text {
+                clear: both;
+                font-size: 18px;
+                margin: 30px;
+            }
+
+            .browser img {
+                width: 100px;
+                float: left;
+                margin: 28px;
+                margin-top: 30px;
+                margin-bottom: 0px;
+                border: none;
+            }
+
+        </style><div  class="page-content"><div class="title">BROWSEREN DIN ER I KOMPATIBILITET MODUS</div><div class="info-text"><div class="editor"><p>For å spille hos Norsk Tipping, må du slå av kompatibilitetsmodus.</p><ol><li>Høyreklikk på tannhjulikonet <img alt="" src="https://www.google.com/help/hc/images/mail/mail_6567_gear_icon.png" /> øverst til høyre, ved siden av stjerneikonet for favoritter. (Hvis du ikke ser tannhjulikonet øverst i vinduet mens du er på Fil- eller Verktøy-menysiden, kan du trykke på F10 for å vise det.)</li><li>Velg <strong>Kommandolinjen</strong>.</li><li>Åpne <strong>Verktøy</strong> øverst i nettleseren, og velg <strong>Innstillinger for kompatibilitetsvisning</strong>.</li><li>Merk av for <strong>norsk-tipping.no</strong> under Webområder lagt til Kompatibilitetsvisning.</li><li>Klikk på <strong>Fjern</strong>.</li><li>Kontroller at det ikke er merket av for «Vis alle nettsteder i kompatibilitetsvisning» nederst i dette vinduet.</li><li>Klikk på <strong>Avslutt</strong>. Siden du er inne på, blir oppdatert og vist i vanlig IE-modus.</li></ol><p>Dersom problemet vedvarer anbefaler vi at du prøver en av følgende nettlesere:</p></div></div><div class="browser-links"><div class="browser"><a class="" href="https://www.google.com/chrome/"><img src="/kompatibilitet-modus/_image/86994.png?_encoded=2f66666666666678302f35382f3b29303031286874646977656c616373&amp;_ts=1483ac20578" /><div class="button">Chrome</div></a></div><div class="browser"><a class="" href="http://www.mozilla.org/"><img src="/kompatibilitet-modus/_image/86996.png?_encoded=2f66666666666678302f35382f3b29303031286874646977656c616373&amp;_ts=1483ac2a1b8" /><div class="button">Firefox</div></a></div><div class="browser"><a class="" href="http://www.opera.com/"><img src="/kompatibilitet-modus/_image/86997.png?_encoded=2f66666666666678302f35382f3b29303031286874646977656c616373&amp;_ts=1483ac2e038" /><div class="button">Opera</div></a></div><div class="browser"><a class="" href="http://windows.microsoft.com/ie"><img src="/kompatibilitet-modus/_image/86995.png?_encoded=2f66666666666678302f35382f3b29303031286874646977656c616373&amp;_ts=1483ac25398" /><div class="button">Internet Explorer</div></a></div></div><div class="contact-text">Trenger du hjelp? Ring oss på tlf. 07770.</div></div></div></div></body><script type="text/javascript">   
+					(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+					(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+					m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+					})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+					ga('create', 'UA-30055898-1', 'norsk-tipping.no');
+					ga('send', 'pageview');
+			</script></html>
