@@ -212,6 +212,8 @@ public:
 	afx_msg void OnBnClickedButton4();
 	afx_msg void OnBnClickedRadio17();
 	BOOL m_en_krona_ospelad;
+	UINT m_maxnomodds;
+	UINT m_minodds;
 };
 
 //{{AFX_INSERT_LOCATION}}
