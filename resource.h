@@ -159,7 +159,9 @@
 #define IDC_MAXSIDA6                    1107
 #define IDC_CHECK5                      1107
 #define IDC_MAXSIDA7                    1108
+#define IDC_EDIT63                      1108
 #define IDC_MAXSIDA8                    1109
+#define IDC_EDIT64                      1109
 #define IDC_MAXSIDA9                    1110
 #define IDC_MAXSIDA10                   1111
 #define IDC_INLASTAODDS2                1112
@@ -184,7 +186,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        144
 #define _APS_NEXT_COMMAND_VALUE         32776
-#define _APS_NEXT_CONTROL_VALUE         1108
+#define _APS_NEXT_CONTROL_VALUE         1110
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif
