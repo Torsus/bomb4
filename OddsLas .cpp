@@ -2046,8 +2046,9 @@ UINT LasDenyaSvenskaOddsen_is_tre(LPVOID param)
 	sprintf(sUrlOrg, "https://api.spela.svenskaspel.se/draw/score/bet_oddslist?product=7&drawnum=%d&home1=%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d&away1=%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d&home2=%d&away2=%d&home3=0&away3=0", Odds->m_matchid, mal1, mal2, mal3, mal4, mal5, mal6, mal7, mal8, mal9, mal10, mal11, mal12, mal13, mal14, mal15, mal16, mal17);
 	
 			
-				for(int mh2 = 0;mh2<11;mh2++)
+				for(int mh2 = 0;mh2<6;mh2++)
 				{
+					int mh2b = (2 * mh2) + 1;
 					for (int mb2 = 0;mb2 < 11;mb2++)
 					{
 						
@@ -2058,7 +2059,14 @@ UINT LasDenyaSvenskaOddsen_is_tre(LPVOID param)
 								{
 									
 									//	sprintf(sUrlOrg, "https://api.spela.svenskaspel.se/draw/score/bet_oddslist?product=7&drawnum=%d&home1=%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d&away1=%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d&home2=%d&away2=%d&home3=%d&away3=%d", Odds->m_matchid, 0, 1, 2, 3, 4, 5,6,7,8,9,10, 0, 1,2,3,4,5,6,7,8,9,10, mh2, mb2, mh3,mb3);
-										sprintf(sUrlOrg, "https://api.www.svenskaspel.se/draw/score/bet_oddslist?product=7&drawnum=%d&home1=%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d&away1=%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d&home2=%d&away2=%d&home3=%d&away3=%d", Odds->m_matchid, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, mh2, mb2, mh3, mb3);
+									if (mh2 < 5) {
+										int mh2double = 2 * mh2;
+										sprintf(sUrlOrg, "https://api.www.svenskaspel.se/draw/score/bet_oddslist?product=7&drawnum=%d&home1=%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d&away1=%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d&home2=%d,%d&away2=%d&home3=%d&away3=%d", Odds->m_matchid, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, mh2double,mh2b, mb2, mh3, mb3);
+									}
+									else if (mh2 == 5) {
+										int mh2double = 2 * mh2;
+										sprintf(sUrlOrg, "https://api.www.svenskaspel.se/draw/score/bet_oddslist?product=7&drawnum=%d&home1=%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d&away1=%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d&home2=%d&away2=%d&home3=%d&away3=%d", Odds->m_matchid, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, mh2double, mb2, mh3, mb3);
+									}
 										//	sprintf(sUrlOrg, "https://api.www.svenskaspel.se/draw/score/bet_oddslist?product=7&drawnum=10889&home1=0,1,2,3,4,5,6,7,8,9&away1=0,1,2,3,4&home2=0,1,2,3,4&away2=0&home3=0&away3=0");
 										::Sleep(5);
 										pFile = m_Session.OpenURL(sUrlOrg, 1, INTERNET_FLAG_DONT_CACHE | INTERNET_FLAG_EXISTING_CONNECT | INTERNET_FLAG_TRANSFER_ASCII);
