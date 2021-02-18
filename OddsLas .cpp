@@ -1761,7 +1761,7 @@ void scanna_oddsen_sverige_is_tre(char responseText3[])
 	antal_odds = 0;
 	status = 0;
 	lasindex = 0;
-	float odds;
+	float odds,odds2;
 	odds = 0;
 	do
 	{
@@ -1944,7 +1944,20 @@ void scanna_oddsen_sverige_is_tre(char responseText3[])
 		{
 			int dummy;
 			dummy = 1;
-			if (odds > 0)
+			odds2 = odds;
+			int hjalpodds;
+			if (Odds->KB[H1][B1][H2][B2][H3][B3][0][0] != NULL) {
+				hjalpodds = Odds->KB[H1][B1][H2][B2][H3][B3][0][0]->NOdds;
+			}
+			else {
+				hjalpodds = Odds->m_maxnomodds;
+			}
+			if (odds >(Odds->m_minodds) && Odds->m_en_krona_ospelad && hjalpodds < Odds->m_maxnomodds) {
+
+				odds = 0;
+			}
+		//	if (odds > 0)
+			if (odds > 0 && Odds->m_en_krona_ospelad == false)
 			{
 				if (Odds->KB[H1][B1][H2][B2][H3][B3][0][0] != NULL)
 				{
@@ -1960,7 +1973,7 @@ void scanna_oddsen_sverige_is_tre(char responseText3[])
 					Odds->NumOdds++;
 				Odds->last[H1][B1][H2][B2][H3][B3][0][0] = true;
 			}
-			else
+			else if (odds2 > Odds->m_minodds && hjalpodds < Odds->m_maxnomodds)
 			{
 				if (Odds->KB[H1][B1][H2][B2][H3][B3][0][0] != NULL)
 					Odds->KB[H1][B1][H2][B2][H3][B3][0][0]->EjSpelad = true;
@@ -1971,6 +1984,22 @@ void scanna_oddsen_sverige_is_tre(char responseText3[])
 				Odds->last[H1][B1][H2][B2][H3][B3][0][0] = true;
 			}
 
+			else {
+				if (Odds->KB[H1][B1][H2][B2][H3][B3][0][0] != NULL)
+				{
+					//	Odds->KB[H1][B1][H2][B2][H3][B3][0][0]->kvot = *(Odds->KvotJust) * odds / Odds->KB[H1][B1][H2][B2][H3][B3][0][0]->NOdds;
+					Odds->KB[H1][B1][H2][B2][H3][B3][0][0]->kvot = 0.5;
+					Odds->KB[H1][B1][H2][B2][H3][B3][0][0]->EjSpelad = false;
+				}
+				/*else
+				{
+				Odds->KB[H1][B1][H2][B2][H3][B3][0][0]->EjSpelad = true;
+				}*/
+				// Räkna upp antal inlästa odds
+				if (!Odds->last[H1][B1][H2][B2][H3][B3][0][0])
+					Odds->NumOdds++;
+				Odds->last[H1][B1][H2][B2][H3][B3][0][0] = true;
+			}
 
 			odds = 0;
 			status = 4;
