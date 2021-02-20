@@ -3626,8 +3626,9 @@ UINT LasDenyaSvenska_fyra(LPVOID param)
 												int apa;
 												apa = 1;
 											}
-											sprintf(sUrlOrg, "https://api.spela.svenskaspel.se/score/bet_oddslist?product=7&drawnum=%d&home1=%d,%d,%d,%d,%d&away1=%d,%d,%d,%d,%d&home2=%d,%d,%d,%d,%d&away2=%d,%d&home3=%d&away3=%d&home4=%d&away4=%d", Odds->m_matchid, mal1, mal2, mal3, mal4, mal5, mal6, mal7, mal8, mal9, mal10, mal11, mal12, mal13, mal14, mal15, mal16, mal17, mal18, mal19, mal20, mal21);
-											//	sprintf(sUrlOrg, "https://api.www.svenskaspel.se/draw/score/bet_oddslist?product=7&drawnum=10889&home1=0,1,2,3,4,5,6,7,8,9&away1=0,1,2,3,4&home2=0,1,2,3,4&away2=0&home3=0&away3=0");
+											sprintf(sUrlOrg, "https://api.spela.svenskaspel.se/draw/1/score/bet_oddslist?product=7&drawnum=%d&home1=%d,%d,%d,%d,%d&away1=%d,%d,%d,%d,%d&home2=%d,%d,%d,%d,%d&away2=%d,%d&home3=%d&away3=%d&home4=%d&away4=%d", Odds->m_matchid, mal1, mal2, mal3, mal4, mal5, mal6, mal7, mal8, mal9, mal10, mal11, mal12, mal13, mal14, mal15, mal16, mal17, mal18, mal19, mal20, mal21);
+										// https://api.spela.svenskaspel.se/draw/1/score/bet_oddslist?product=7&drawnum=13105&home1=0,1&away1=0,1,2&home2=0,1&away2=0,1&home3=10&away3=9,
+										//	sprintf(sUrlOrg, "https://api.spela.svenskaspel.se/draw/1/score/bet_oddslist?product=7&drawnum=10889&home1=0,1,2,3,4,5,6,7,8,9&away1=0,1,2,3,4&home2=0,1,2,3,4&away2=0&home3=0&away3=0");
 											::Sleep(1);
 											pFile = m_Session.OpenURL(sUrlOrg, 1, INTERNET_FLAG_DONT_CACHE | INTERNET_FLAG_EXISTING_CONNECT | INTERNET_FLAG_TRANSFER_ASCII);
 											pFile->ReadString(buffer, 16099);
