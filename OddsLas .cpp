@@ -3479,7 +3479,55 @@ void scanna_oddsen_sverige_fyra(char responseText2[])
 	} while (status < 33);
 }
 
-
+bool kollanomodds4matcher(int mh1, int mb1, int mh2, int mb2, int mh3, int mb3, int mh4, int mb4) {
+	int loop1start, loop1slut, loop2start, loop2slut,loop3start,loop3slut,loop4start,loop4slut;
+	bool ska_lasas = false;
+	if (mh1 == 0) {
+		loop1start = 0;
+		loop1slut = 4;
+	}
+	else {
+		loop1start = 5;
+		loop1slut = 9;
+	}
+	if (mb1 == 0) {
+		loop2start = 0;
+		loop2slut = 4;
+	}
+	else {
+		loop2start = 5;
+		loop2slut = 9;
+	}
+	if (mh2 == 0) {
+		loop3start = 0;
+		loop3slut = 4;
+	}
+	else {
+		loop3start = 5;
+		loop3slut = 9;
+	}
+	loop4start = 2 * mb2;
+	loop4slut = loop4slut + 1;
+	for (int a = loop1start; a <= loop1slut; a++) {
+		for (int b = loop2start; b <= loop2slut; b++) {
+			for (int c = loop3start; c <= loop3slut; c++) {
+				for (int d = loop4start; d <= loop4slut; d++) {
+					int hjalpodds;
+					if (Odds->KB[a][b][c][d][mh3][mb3][mh4][mb4] != NULL) {
+						hjalpodds = Odds->KB[a][b][c][d][mh3][mb3][mh4][mb4]->NOdds;
+					}
+					else {
+						hjalpodds = Odds->m_maxnomodds;
+					}
+					if (hjalpodds < Odds->m_maxnomodds){
+						ska_lasas = true;
+					}
+				}
+			}
+		}
+	}
+	return ska_lasas;
+}
 
 UINT LasDenyaSvenska_fyra(LPVOID param)
 {
@@ -3626,15 +3674,21 @@ UINT LasDenyaSvenska_fyra(LPVOID param)
 												int apa;
 												apa = 1;
 											}
-											sprintf(sUrlOrg, "https://api.spela.svenskaspel.se/draw/1/score/bet_oddslist?product=7&drawnum=%d&home1=%d,%d,%d,%d,%d&away1=%d,%d,%d,%d,%d&home2=%d,%d,%d,%d,%d&away2=%d,%d&home3=%d&away3=%d&home4=%d&away4=%d", Odds->m_matchid, mal1, mal2, mal3, mal4, mal5, mal6, mal7, mal8, mal9, mal10, mal11, mal12, mal13, mal14, mal15, mal16, mal17, mal18, mal19, mal20, mal21);
-										// https://api.spela.svenskaspel.se/draw/1/score/bet_oddslist?product=7&drawnum=13105&home1=0,1&away1=0,1,2&home2=0,1&away2=0,1&home3=10&away3=9,
-										//	sprintf(sUrlOrg, "https://api.spela.svenskaspel.se/draw/1/score/bet_oddslist?product=7&drawnum=10889&home1=0,1,2,3,4,5,6,7,8,9&away1=0,1,2,3,4&home2=0,1,2,3,4&away2=0&home3=0&away3=0");
-											::Sleep(1);
-											pFile = m_Session.OpenURL(sUrlOrg, 1, INTERNET_FLAG_DONT_CACHE | INTERNET_FLAG_EXISTING_CONNECT | INTERNET_FLAG_TRANSFER_ASCII);
-											pFile->ReadString(buffer, 16099);
-											status = 0;
-											scanna_oddsen_sverige_fyra(buffer);
-											antalvarv++;
+											if (kollanomodds4matcher(mh1, mb1, mh2, mb2, mh3, mb3, mh4, mb4)) {
+												sprintf(sUrlOrg, "https://api.spela.svenskaspel.se/draw/1/score/bet_oddslist?product=7&drawnum=%d&home1=%d,%d,%d,%d,%d&away1=%d,%d,%d,%d,%d&home2=%d,%d,%d,%d,%d&away2=%d,%d&home3=%d&away3=%d&home4=%d&away4=%d", Odds->m_matchid, mal1, mal2, mal3, mal4, mal5, mal6, mal7, mal8, mal9, mal10, mal11, mal12, mal13, mal14, mal15, mal16, mal17, mal18, mal19, mal20, mal21);
+												// https://api.spela.svenskaspel.se/draw/1/score/bet_oddslist?product=7&drawnum=13105&home1=0,1&away1=0,1,2&home2=0,1&away2=0,1&home3=10&away3=9,
+												//	sprintf(sUrlOrg, "https://api.spela.svenskaspel.se/draw/1/score/bet_oddslist?product=7&drawnum=10889&home1=0,1,2,3,4,5,6,7,8,9&away1=0,1,2,3,4&home2=0,1,2,3,4&away2=0&home3=0&away3=0");
+												::Sleep(1);
+												pFile = m_Session.OpenURL(sUrlOrg, 1, INTERNET_FLAG_DONT_CACHE | INTERNET_FLAG_EXISTING_CONNECT | INTERNET_FLAG_TRANSFER_ASCII);
+												pFile->ReadString(buffer, 16099);
+												status = 0;
+												scanna_oddsen_sverige_fyra(buffer);
+												antalvarv++;
+											}
+											else {
+												antalvarv++;
+												Odds->NumOdds += 250;
+											}
 										}
 										pFile->Close();
 									}
