@@ -2309,7 +2309,12 @@ void CBombDlg::OnSkapaRapportfil()
 	char	filename[32];
 
 	if (m_speltyp == 0)
-		sprintf(filename, "SvenskFotboll.txt" ); 
+		if (!m_en_krona_ospelad) {
+			sprintf(filename, "SvenskFotboll.txt");
+		}
+		else {
+			sprintf(filename, "SvenskFotboll_ospelade.txt");
+		}
 	else if (m_speltyp == 1)
 		sprintf(filename, "SvenskHockey.txt" ); 
 	else if (m_speltyp == 2)
