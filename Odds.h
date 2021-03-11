@@ -45,7 +45,7 @@ public:
 	int m_utvardering;
 	int mh1,mb1,mh2,mb2,mh3,mb3,mh4,mb4;
 	int m_omsattning;
-	int m_maxnomodds, m_minodds;
+	int m_maxnomodds, m_minodds,m_minnomodds;
 	bool m_en_krona_ospelad;
 	bool m_OspeladeForvalt;
 	bool m_UpprepaForvalt;

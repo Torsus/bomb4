@@ -2645,6 +2645,7 @@ void CBombDlg::OnButton5()
 	Odds->m_omsattning = m_omsattning;
 	Odds->m_maxnomodds = m_maxnomodds;
 	Odds->m_minodds = m_minodds;
+	Odds->m_minnomodds = m_minnomodds;
 	Odds->m_en_krona_ospelad = m_en_krona_ospelad;
 	Odds->MissadeSidor = 0;
 	ShowWindow(SW_SHOWMINIMIZED);

@@ -3321,7 +3321,7 @@ void scanna_oddsen_sverige_fyra(char responseText2[])
 	antal_odds = 0;
 	status = 0;
 	lasindex = 0;
-	float odds;
+	float odds,odds2;
 	odds = 0;
 	do
 	{
@@ -3440,7 +3440,19 @@ void scanna_oddsen_sverige_fyra(char responseText2[])
 				koll = 1;
 			}*/
 			dummy = 1;
-			if (odds > 0)
+			odds2 = odds;
+			int hjalpodds;
+			if (Odds->KB[H1][B1][H2][B2][H3][B3][H4][B4] != NULL) {
+				hjalpodds = Odds->KB[H1][B1][H2][B2][H3][B3][H4][B4]->NOdds;
+			}
+			else {
+				hjalpodds = Odds->m_maxnomodds;
+			}
+			if (odds > (Odds->m_minodds) && Odds->m_en_krona_ospelad && hjalpodds < Odds->m_maxnomodds) {
+				odds = 0;
+			}
+		//	if (odds > 0)
+			if (odds > 0 && Odds->m_en_krona_ospelad == false)
 			{
 				if (Odds->KB[H1][B1][H2][B2][H3][B3][H4][B4] != NULL)
 				{
@@ -3456,7 +3468,7 @@ void scanna_oddsen_sverige_fyra(char responseText2[])
 					Odds->NumOdds++;
 				Odds->last[H1][B1][H2][B2][H3][B3][H4][B4] = true;
 			}
-			else
+			else if (odds2 > Odds->m_minodds && hjalpodds < Odds->m_maxnomodds)
 			{
 				if (Odds->KB[H1][B1][H2][B2][H3][B3][H4][B4] != NULL)
 					Odds->KB[H1][B1][H2][B2][H3][B3][H4][B4]->EjSpelad = true;
@@ -3466,6 +3478,23 @@ void scanna_oddsen_sverige_fyra(char responseText2[])
 					Odds->NumOdds++;
 				Odds->last[H1][B1][H2][B2][H3][B3][H4][B4] = true;
 			}
+			else {
+				if (Odds->KB[H1][B1][H2][B2][H3][B3][H4][B4] != NULL)
+				{
+					//	Odds->KB[H1][B1][H2][B2][H3][B3][0][0]->kvot = *(Odds->KvotJust) * odds / Odds->KB[H1][B1][H2][B2][H3][B3][0][0]->NOdds;
+					Odds->KB[H1][B1][H2][B2][H3][B3][H4][B4]->kvot = 0.5;
+					Odds->KB[H1][B1][H2][B2][H3][B3][H4][B4]->EjSpelad = false;
+				}
+				/*else
+				{
+				Odds->KB[H1][B1][H2][B2][H3][B3][0][0]->EjSpelad = true;
+				}*/
+				// Räkna upp antal inlästa odds
+				if (!Odds->last[H1][B1][H2][B2][H3][B3][H4][B4])
+					Odds->NumOdds++;
+				Odds->last[H1][B1][H2][B2][H3][B3][H4][B4] = true;
+			}
+
 
 
 			odds = 0;
@@ -3507,19 +3536,27 @@ bool kollanomodds4matcher(int mh1, int mb1, int mh2, int mb2, int mh3, int mb3, 
 		loop3slut = 9;
 	}
 	loop4start = 2 * mb2;
-	loop4slut = loop4slut + 1;
+	loop4slut = loop4start + 1;
 	for (int a = loop1start; a <= loop1slut; a++) {
 		for (int b = loop2start; b <= loop2slut; b++) {
 			for (int c = loop3start; c <= loop3slut; c++) {
 				for (int d = loop4start; d <= loop4slut; d++) {
-					int hjalpodds;
+					float hjalpodds;
 					if (Odds->KB[a][b][c][d][mh3][mb3][mh4][mb4] != NULL) {
-						hjalpodds = Odds->KB[a][b][c][d][mh3][mb3][mh4][mb4]->NOdds;
+					//	try {
+							hjalpodds = Odds->KB[a][b][c][d][mh3][mb3][mh4][mb4]->NOdds;
+					//	}
+					//	catch (...) {
+					//		int a;
+					//		a = 1;
+					//	}
 					}
 					else {
-						hjalpodds = Odds->m_maxnomodds;
+					//	hjalpodds = Odds->m_maxnomodds;
+						hjalpodds = Odds->m_minnomodds;
 					}
-					if (hjalpodds < Odds->m_maxnomodds){
+				//	if (hjalpodds < Odds->m_maxnomodds){
+					if (hjalpodds < Odds->m_minnomodds){
 						ska_lasas = true;
 					}
 				}
@@ -3539,6 +3576,7 @@ UINT LasDenyaSvenska_fyra(LPVOID param)
 	int antal_odds;
 	float odds;
 	int status;
+	bool filoppen;
 	char buffer[17000];
 	antalvarv = 0;
 	antal_odds = 0;
@@ -3674,7 +3712,9 @@ UINT LasDenyaSvenska_fyra(LPVOID param)
 												int apa;
 												apa = 1;
 											}
+											filoppen = false;
 											if (kollanomodds4matcher(mh1, mb1, mh2, mb2, mh3, mb3, mh4, mb4)) {
+												filoppen = true;
 												sprintf(sUrlOrg, "https://api.spela.svenskaspel.se/draw/1/score/bet_oddslist?product=7&drawnum=%d&home1=%d,%d,%d,%d,%d&away1=%d,%d,%d,%d,%d&home2=%d,%d,%d,%d,%d&away2=%d,%d&home3=%d&away3=%d&home4=%d&away4=%d", Odds->m_matchid, mal1, mal2, mal3, mal4, mal5, mal6, mal7, mal8, mal9, mal10, mal11, mal12, mal13, mal14, mal15, mal16, mal17, mal18, mal19, mal20, mal21);
 												// https://api.spela.svenskaspel.se/draw/1/score/bet_oddslist?product=7&drawnum=13105&home1=0,1&away1=0,1,2&home2=0,1&away2=0,1&home3=10&away3=9,
 												//	sprintf(sUrlOrg, "https://api.spela.svenskaspel.se/draw/1/score/bet_oddslist?product=7&drawnum=10889&home1=0,1,2,3,4,5,6,7,8,9&away1=0,1,2,3,4&home2=0,1,2,3,4&away2=0&home3=0&away3=0");
@@ -3690,6 +3730,7 @@ UINT LasDenyaSvenska_fyra(LPVOID param)
 												Odds->NumOdds += 250;
 											}
 										}
+										if (filoppen == true)
 										pFile->Close();
 									}
 									
